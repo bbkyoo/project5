@@ -1,0 +1,41 @@
+1 개인 저장소에 올릴 경우
+1) git init
+
+2) 환경 변수
+git config --global user.name "mue76”
+git config --global user.email Ghyunghee@gmail.com
+
+3) git add 'python_programming.ipynb'
+
+4) git commit -m "Python programming workshop"
+
+5) git log
+
+-------------------------------------------------------------
+
+6) git remote -v
+
+- 이미 다른게 있는 경우 : 
+git remote remove origin
+git remote add origin https://github.com/mue76/Python-Program
+
+- 아무것도 없을 경우: 
+git remote add origin https://github.com/mue76/Python-Program
+
+7) git push origin master
+-------------------------------------------------------------------
+
+2. 공동 저장소에서 작업할 때
+리더 : 원격저장소에 repo를 만들고, access 권한을 팀원에게 주기
+팀원 : 로컬저장소와 원격저장소의 동기를 맞춤
+git clone https://github.com/mue76/ClassroomRepo
+
+작업한 파일을 원격저장소에 올릴 수 있음
+
+이 후 다른 팀원이 원격저장소에 다른 내용을 업데이트 한 경우
+: 원격저장소와 로컬저장소의 동기를 다시 맞추기
+git pull origin master
+
+작업...
+
+
