@@ -71,10 +71,26 @@ tmp2.describe
 
 # ## Visualize Some of the Data
 
-# In[ ]:
+# In[31]:
 
 
+fig, axs = plt.subplots(8,8, figsize=(16, 16))
+fig.subplots_adjust(hspace = .2, wspace=.001)
+axs = axs.ravel()
 
+# Step through the list and search for chessboard corners
+for i in np.arange(32):
+    img = mpimg.imread(vehicles_dataset[np.random.randint(0,len(vehicles_dataset))])
+    #img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+    axs[i].axis('off')
+    axs[i].set_title('car', fontsize=10)
+    axs[i].imshow(img)
+for i in np.arange(32,64):
+    img = mpimg.imread(non_vehicles_dataset[np.random.randint(0,len(non_vehicles_dataset))])
+    #img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+    axs[i].axis('off')
+    axs[i].set_title('noncar', fontsize=10)
+    axs[i].imshow(img)
 
 
 # ## Feature Extraction Method
