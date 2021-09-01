@@ -23,14 +23,14 @@ def load_dataset(vehicles_path = "./vehicles/vehicles", non_vehicles_path = "./n
         tmp = os.listdir('./vehicles/vehicles/{}'.format(i))
         tmp2 = []
         for j in range(len(tmp)):
-            tmp2.append(i + '/' + tmp[j])
+            tmp2.append(vehicles_path + '/' + i + '/' + tmp[j])
         vehicles_dataset = vehicles_dataset + tmp2
 
     for i in non_vehicles_folder_name:
-        tmp = os.listdir('./non-vehicles/non-vehicles/{}'.format(i))
+        tmp = os.listdir(./non-vehicles/non-vehicles/{}'.format(i))
         tmp2 = []
         for j in range(len(tmp)):
-            tmp2.append(i + '/' + tmp[j])
+            tmp2.append(non_vehicles_path + '/' + 'i + '/' + tmp[j])
         non_vehicles_dataset = non_vehicles_dataset + tmp2
 
     name_dataset = vehicles_dataset + non_vehicles_dataset
