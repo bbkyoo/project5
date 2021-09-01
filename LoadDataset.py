@@ -27,7 +27,7 @@ def load_dataset(vehicles_path = "./vehicles/vehicles", non_vehicles_path = "./n
         vehicles_dataset = vehicles_dataset + tmp2
 
     for i in non_vehicles_folder_name:
-        tmp = os.listdir(./non-vehicles/non-vehicles/{}'.format(i))
+        tmp = os.listdir('./non-vehicles/non-vehicles/{}'.format(i))
         tmp2 = []
         for j in range(len(tmp)):
             tmp2.append(non_vehicles_path + '/' + 'i + '/' + tmp[j])
